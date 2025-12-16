@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  </link>
+  <title>Busca CEP</title>
+</head>
+
+<body>
+  <form id="formId">
+    <label for="CEP">CEP</label>
+    <input placeholder="Digite o CEP" type="text" name="CEP" id="idCep"></input>
+    <button data-modal="abrir" id="idPesquisa" type="button" onclick="pesquisarApi()">Buscar</button>
+  </form>
+
+  <section class="modal-container" data-modal="container">
+    <div class="modal">
+      <button data-modal="fechar" class="fechar">X</button>
+      <form action="" id="resultadoPesquisa">
+        <label for="Endereco">Endereço</label>
+        <input type="text" disabled="true" id="idEndereco" name="Endereco"></input>
+        <label for="Complemento">Complemento</label>
+        <input type="text" disabled="true" id="idComplemento" name="Complemento">
+        <label for="Bairro">Bairro</label>
+        <input type="text" disabled="true" id="idBairro" name="Bairro">
+        <label for="Estado">Estado</label>
+        <input type="text" disabled="true" id="idEstado" name="Estado">
+        <label for="Localidade">Localidade</label>
+        <input type="text" disabled="true" id="idLocalidade" name="Localidade">
+      </form>
+    </div>
+  </section>
+
+  <section class="nao-encontrado" data-modal="container-nao-encontrado">
+    <div class="modal">
+      <button data-modal="fechar-aviso" class="fechar">X</button>
+      <form action="" id="cepNaoEncontrado">
+        <label for="Aviso">CEP não encontrado</label>
+      </form>
+    </div>
+  </section>
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
